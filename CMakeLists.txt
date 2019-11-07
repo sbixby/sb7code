@@ -150,7 +150,7 @@ IF (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 ENDIF (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 
 include_directories( include )
-include_directories(extern/glfw-3.0.4/include)
+include_directories(extern/glfw-3.3/include)
 
 ADD_CUSTOM_TARGET(debug ${CMAKE_COMMAND} -DCMAKE_BUILD_TYPE:STRING=Debug ${PROJECT_SOURCE_DIR})
 ADD_CUSTOM_TARGET(release ${CMAKE_COMMAND} -DCMAKE_BUILD_TYPE:STRING=Release ${PROJECT_SOURCE_DIR})
