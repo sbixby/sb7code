@@ -169,17 +169,18 @@ class singlepoint_app : public sb7::application
 		glBindBuffer(GL_ARRAY_BUFFER, buffer);
 		glBufferStorage(GL_ARRAY_BUFFER, byte_len * 2, nullptr, GL_MAP_WRITE_BIT | GL_MAP_READ_BIT | GL_DYNAMIC_STORAGE_BIT);
 
-		GLfloat* rm = static_cast<GLfloat*>(glMapBuffer(GL_ARRAY_BUFFER, GL_READ_ONLY));
-		for(auto i =0;i<arr_len*2;i+3)
-		{
-			OutputDebugString(std::to_string(rm[i]).c_str());
-			OutputDebugString(", ");
-			OutputDebugString(std::to_string(rm[i+1]).c_str());
-			OutputDebugString(", ");
-			OutputDebugString(std::to_string(rm[i+2]).c_str());
-			OutputDebugString("\n");
-		}
-		glUnmapBuffer(GL_ARRAY_BUFFER);
+		// Dumps buffer before it was initialized
+		// GLfloat* rm = static_cast<GLfloat*>(glMapBuffer(GL_ARRAY_BUFFER, GL_READ_ONLY));
+		// for(auto i =0;i<arr_len*2;i+=3)
+		// {
+		// 	OutputDebugString(std::to_string(rm[i]).c_str());
+		// 	OutputDebugString(", ");
+		// 	OutputDebugString(std::to_string(rm[i+1]).c_str());
+		// 	OutputDebugString(", ");
+		// 	OutputDebugString(std::to_string(rm[i+2]).c_str());
+		// 	OutputDebugString("\n");
+		// }
+		// glUnmapBuffer(GL_ARRAY_BUFFER);
 
 		// Named versions
 		// glNamedBufferSubData(buffer, 0, sizeof(vertex_positions), vertex_positions);
