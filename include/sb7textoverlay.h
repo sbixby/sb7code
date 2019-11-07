@@ -49,6 +49,7 @@ public:
     void print(const char* str);
     void scroll(int lines);
     void moveCursor(int x, int y);
+	void setTexturePath(char tp[]);
     void clear();
 
 private:
@@ -63,6 +64,7 @@ private:
     bool        dirty;
     int         cursor_x;
     int         cursor_y;
+	char		texturePath[256];
 };
 
 } // namespace sb7
